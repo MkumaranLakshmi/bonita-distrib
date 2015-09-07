@@ -217,4 +217,31 @@
               url="jdbc:mysql://localhost:3306/business_data?dontTrackOpenResources=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>
     -->
 
+    <!-- Derby Example -->
+    <!--
+    <Resource name="bonitaSequenceManagerDS"  
+              auth="Container"  
+              type="javax.sql.DataSource" 
+              maxActive="17"  
+              minIdle="5"  
+              maxWait="10000"  
+              initialSize="3" 
+              maxPoolSize="15" 
+              minPoolSize="3"
+              maxConnectionAge="0"
+              maxIdleTime="1800"
+              maxIdleTimeExcessConnections="120"
+              idleConnectionTestPeriod="30"
+              acquireIncrement="3"
+              validationQuery="SELECT 1"
+              validationInterval="30000"
+              testConnectionOnCheckout="true"
+              removeAbandoned="true" 
+              logAbandoned="true" 
+              username="bonita" 
+              password="bpm"
+              driverClassName="org.apache.derby.jdbc.EmbeddedDriver" 
+              url="jdbc:derby:${db.database.name};create=true
+    -->
+
 </Context>
