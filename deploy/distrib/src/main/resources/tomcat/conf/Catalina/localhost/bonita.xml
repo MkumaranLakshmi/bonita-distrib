@@ -111,6 +111,23 @@
               url="jdbc:sqlserver://localhost:1433;database=journal"/>
     -->
 
+    <!-- Derby Example -->
+    <!--
+    <Resource name="bonitaSequenceManagerDS"
+              auth="Container"
+              type="javax.sql.DataSource"
+              maxActive="17"
+              minIdle="5"
+              maxWait="10000"
+              initialSize="3"
+              validationQuery="VALUES 1"
+              validationInterval="30000"
+              removeAbandoned="true"
+              logAbandoned="true"
+              driverClassName="org.apache.derby.jdbc.EmbeddedDriver"
+              url="jdbc:derby:bonita/engine-server/platform/work/bonita6_journal;create=true;collation=TERRITORY_BASED:PRIMARY"/>
+    -->
+
    <!-- ##################################################### -->
    <!-- Configure Business Data Datasource -->
    <!-- ##################################################### -->
@@ -219,56 +236,21 @@
 
     <!-- Derby Example -->
     <!--
-    <Resource name="bonitaSequenceManagerDS"  
-              auth="Container"  
-              type="javax.sql.DataSource" 
-              maxActive="17"  
-              minIdle="5"  
-              maxWait="10000"  
-              initialSize="3" 
-              maxPoolSize="15" 
-              minPoolSize="3"
-              maxConnectionAge="0"
-              maxIdleTime="1800"
-              maxIdleTimeExcessConnections="120"
-              idleConnectionTestPeriod="30"
-              acquireIncrement="3"
-              validationQuery="SELECT 1"
+    <Resource name="NotManagedBizDataDS"
+              auth="Container"
+              type="javax.sql.DataSource"
+              maxActive="17"
+              minIdle="5"
+              maxWait="10000"
+              initialSize="3"
+              validationQuery="VALUES 1"
               validationInterval="30000"
-              testConnectionOnCheckout="true"
-              removeAbandoned="true" 
-              logAbandoned="true" 
-              username="bonita" 
+              removeAbandoned="true"
+              logAbandoned="true"
+              username="bonita"
               password="bpm"
-              driverClassName="org.apache.derby.jdbc.EmbeddedDriver" 
-              url="jdbc:derby:${db.database.name};create=true
-    -->
-
-    <!-- Derby Example -->
-    <!--
-    <Resource name="bonitaSequenceManagerDS"  
-              auth="Container"  
-              type="javax.sql.DataSource" 
-              maxActive="17"  
-              minIdle="5"  
-              maxWait="10000"  
-              initialSize="3" 
-              maxPoolSize="15" 
-              minPoolSize="3"
-              maxConnectionAge="0"
-              maxIdleTime="1800"
-              maxIdleTimeExcessConnections="120"
-              idleConnectionTestPeriod="30"
-              acquireIncrement="3"
-              validationQuery="SELECT 1"
-              validationInterval="30000"
-              testConnectionOnCheckout="true"
-              removeAbandoned="true" 
-              logAbandoned="true" 
-              username="bonita" 
-              password="bpm"
-              driverClassName="org.apache.derby.jdbc.EmbeddedDriver" 
-              url="jdbc:derby:${db.database.name};create=true
+              driverClassName="org.apache.derby.jdbc.EmbeddedDriver"
+              url="jdbc:derby:bonita/engine-server/platform/work/bdm;create=true;collation=TERRITORY_BASED:PRIMARY"/>
     -->
 
 </Context>
